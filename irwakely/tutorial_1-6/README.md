@@ -2,4 +2,4 @@
 
 ## Notes
 
--
+- Completed tutorial and created a graph of the values in the tutorial
