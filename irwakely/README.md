@@ -10,16 +10,14 @@ I have been assigned to work on the Publisher section of Project 1.
 ## Fancy Quote
 > The true sign of intelligence is not knowledge but imagination. - Albert Einstein
 
-## Core ROS Tutorials
-
-http://wiki.ros.org/ROS/Tutorials
+## [Core ROS Tutorials](http://wiki.ros.org/ROS/Tutorials)
 
 ### Beginner Level
 
-0. [ ] [Installing and Configuring Your ROS Environment](./tutorial_1-1)
-0. [ ] [Navigating the ROS Filesystem](./tutorial_1-2)
-0. [ ] [Creating a ROS Package](./tutorial_1-3)
-0. [ ] [Building a ROS Package](./tutorial_1-4)
+0. [x] [Installing and Configuring Your ROS Environment](./tutorial_1-1)
+0. [x] [Navigating the ROS Filesystem](./tutorial_1-2)
+0. [x] [Creating a ROS Package](./tutorial_1-3)
+0. [x] [Building a ROS Package](./tutorial_1-4)
 0. [ ] [Understanding ROS Nodes](./tutorial_1-5)
 0. [ ] [Understanding ROS Topics](./tutorial_1-6)
 0. [ ] [Understanding ROS Services and Parameters](./tutorial_1-7)
@@ -35,7 +33,6 @@ http://wiki.ros.org/ROS/Tutorials
 0. [ ] [Recording and playing back data](./tutorial_1-17)
 0. [ ] [Getting started with roswtf](./tutorial_1-18)
 0. [ ] [Navigating the ROS wiki](./tutorial_1-19)
-0. [ ] [Where Next?](./tutorial_1-20)
 
 ### Intermediate Level
 
