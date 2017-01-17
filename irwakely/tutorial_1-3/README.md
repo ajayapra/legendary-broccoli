@@ -2,4 +2,4 @@
 
 ## Notes
 
-- Completed tutorial using the rosbuild instructions.
+- Completed tutorial using the `rosbuild` instructions.
