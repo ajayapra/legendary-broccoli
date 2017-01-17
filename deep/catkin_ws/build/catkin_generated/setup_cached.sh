@@ -7,7 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/robotics5/git/legendary-broccoli/deep/catkin_ws/devel:$CMAKE_PREFIX_PATH"
 export PWD="/home/robotics5/git/legendary-broccoli/deep/catkin_ws/build"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/robotics5/git/legendary-broccoli/deep/catkin_ws/devel/share/common-lisp"
-export ROS_PACKAGE_PATH="/home/robotics5/git/legendary-broccoli/deep/catkin_ws/src:$ROS_PACKAGE_PATH"
