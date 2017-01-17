@@ -6,6 +6,7 @@
 - Installed Indigo Igloo sucessfully on a "repaired" laptop
   - Ubuntu 14.04.4: `$ apt-get install ros-indigo-desktop-full`
 - `/opt/ros/indigo/setup.bash` can't be viewed by the user. It does actually exist, it just isn't readable by the user.
+- Re-completed again for `catkin` instructions.
 
 ## Confirmation
 

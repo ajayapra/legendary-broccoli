@@ -2,4 +2,5 @@
 
 ## Notes
 
--
+- Followed instructions for Python
+- Works without and issues.
