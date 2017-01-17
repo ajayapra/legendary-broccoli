@@ -2,4 +2,5 @@
 
 ## Notes
 
--
+- Completed tutorial using the `rosbuild` instructions.
+- Re-completed again for `catkin` instructions.

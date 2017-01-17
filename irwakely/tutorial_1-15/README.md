@@ -2,4 +2,5 @@
 
 ## Notes
 
--
+- Completed tutorial using the `rosbuild` instructions.
+- Tutorial gets very confusing here has it doesn't do a very good jop of seperating what is needed with regards to `catkin` and `rosbuild`

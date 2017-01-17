@@ -10,32 +10,29 @@ I have been assigned to work on the Publisher section of Project 1.
 ## Fancy Quote
 > The true sign of intelligence is not knowledge but imagination. - Albert Einstein
 
-## Core ROS Tutorials
-
-http://wiki.ros.org/ROS/Tutorials
+## [Core ROS Tutorials](http://wiki.ros.org/ROS/Tutorials)
 
 ### Beginner Level
 
-0. [ ] [Installing and Configuring Your ROS Environment](./tutorial_1-1)
-0. [ ] [Navigating the ROS Filesystem](./tutorial_1-2)
-0. [ ] [Creating a ROS Package](./tutorial_1-3)
-0. [ ] [Building a ROS Package](./tutorial_1-4)
-0. [ ] [Understanding ROS Nodes](./tutorial_1-5)
-0. [ ] [Understanding ROS Topics](./tutorial_1-6)
-0. [ ] [Understanding ROS Services and Parameters](./tutorial_1-7)
-0. [ ] [Using rqt_console and roslaunch](./tutorial_1-8)
-0. [ ] [Using rosed to edit files in ROS](./tutorial_1-9)
-0. [ ] [Creating a ROS msg and srv](./tutorial_1-10)
+0. [x] [Installing and Configuring Your ROS Environment](./tutorial_1-1)
+0. [x] [Navigating the ROS Filesystem](./tutorial_1-2)
+0. [x] [Creating a ROS Package](./tutorial_1-3)
+0. [x] [Building a ROS Package](./tutorial_1-4)
+0. [x] [Understanding ROS Nodes](./tutorial_1-5)
+0. [x] [Understanding ROS Topics](./tutorial_1-6)
+0. [x] [Understanding ROS Services and Parameters](./tutorial_1-7)
+0. [x] [Using rqt_console and roslaunch](./tutorial_1-8)
+0. [x] [Using rosed to edit files in ROS](./tutorial_1-9)
+0. [x] [Creating a ROS msg and srv](./tutorial_1-10)
 0. [ ] [Writing a Simple Publisher and Subscriber (C++)](./tutorial_1-11)
-0. [ ] [Writing a Simple Publisher and Subscriber (Python)](./tutorial_1-12)
-0. [ ] [Examining the Simple Publisher and Subscriber](./tutorial_1-13)
+0. [x] [Writing a Simple Publisher and Subscriber (Python)](./tutorial_1-12)
+0. [x] [Examining the Simple Publisher and Subscriber](./tutorial_1-13)
 0. [ ] [Writing a Simple Service and Client (C++)](./tutorial_1-14)
-0. [ ] [Writing a Simple Service and Client (Python)](./tutorial_1-15)
-0. [ ] [Examining the Simple Service and Client](./tutorial_1-16)
+0. [x] [Writing a Simple Service and Client (Python)](./tutorial_1-15)
+0. [x] [Examining the Simple Service and Client](./tutorial_1-16)
 0. [ ] [Recording and playing back data](./tutorial_1-17)
 0. [ ] [Getting started with roswtf](./tutorial_1-18)
 0. [ ] [Navigating the ROS wiki](./tutorial_1-19)
-0. [ ] [Where Next?](./tutorial_1-20)
 
 ### Intermediate Level
 

@@ -2,4 +2,5 @@
 
 ## Notes
 
--
+- Made the turtles do large and small circles.
+- Made 3 groups of turtles.
