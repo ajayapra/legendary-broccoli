@@ -1,0 +1,12 @@
+background_b: 255
+background_g: 86
+background_r: 150
+rosdistro: 'indigo
+
+  '
+roslaunch:
+  uris: {host_surya_inspiron_5555__32829: 'http://surya-Inspiron-5555:32829/'}
+rosversion: '1.11.20
+
+  '
+run_id: b765ed82-dce4-11e6-8cb2-a8a795be4baf
