@@ -1,0 +1,17 @@
+<package>
+  <description brief="beginner_tut">
+
+     beginner_tut
+
+  </description>
+  <author>Aswin Jayaprakash</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/beginner_tut</url>
+  <depend package="std_msgs"/>
+  <depend package="rospy"/>
+  <depend package="roscpp"/>
+
+</package>
+
+
