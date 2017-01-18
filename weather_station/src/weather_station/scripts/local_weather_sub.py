@@ -29,7 +29,7 @@ calm = [
 ]
 
 def callback(data):
-    rospy.loginfo(rospy.get_caller_id() + 'Temperature %s | Windspeed: %s | Humidity: %s | Timestamp %s' % (data.temperature, data.windspeed, data.humidity, data.timestamp))
+    rospy.loginfo(rospy.get_caller_id() + ' Zipcode %s | Temperature %s | Windspeed: %s | Humidity: %s | Timestamp %s' % (data.zipcode, data.temperature, data.windspeed, data.humidity, data.timestamp))
 
     if data.temperature < 32:
         extra = cold
