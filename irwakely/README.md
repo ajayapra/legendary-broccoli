@@ -30,9 +30,9 @@ I have been assigned to work on the Publisher section of Project 1.
 0. [ ] [Writing a Simple Service and Client (C++)](./tutorial_1-14)
 0. [x] [Writing a Simple Service and Client (Python)](./tutorial_1-15)
 0. [x] [Examining the Simple Service and Client](./tutorial_1-16)
-0. [ ] [Recording and playing back data](./tutorial_1-17)
-0. [ ] [Getting started with roswtf](./tutorial_1-18)
-0. [ ] [Navigating the ROS wiki](./tutorial_1-19)
+0. [x] [Recording and playing back data](./tutorial_1-17)
+0. [x] [Getting started with roswtf](./tutorial_1-18)
+0. [x] [Navigating the ROS wiki](./tutorial_1-19)
 
 ### Intermediate Level
 

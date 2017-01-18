@@ -2,4 +2,4 @@
 
 ## Notes
 
--
+- I read tutorial
