@@ -1,4 +1,4 @@
-# legendary-broccoli
+#legendary-broccoli
 EE5900: Intro to Robotics, Project One
 
 ## Development
@@ -11,8 +11,11 @@ $ cd ..
 $ catkin_make
 $ source devel/setup.bash
 ```
-# Executing Publisher and Listener
-Make sure you do $ source devel/setup.bash in every new terminal
+# Executing OWM API Publisher and Listener
+Make sure you do `$ source devel/setup.bash` in every new terminal
+
+Install pyowm(Open Weather map API) using pip
+`$ pip install pyowm`
 
 In one terminal
 `$ roscore`
