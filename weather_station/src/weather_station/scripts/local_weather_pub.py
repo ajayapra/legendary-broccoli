@@ -31,15 +31,15 @@ def weather_pub_start(zip, refresh):
 if __name__ == '__main__':
     if len(sys.argv) == 3:
         zip = int(sys.argv[1])
-        rate = 1/float(sys.argv[2]) # secs
+        rate = 1/float(sys.argv[2])
     elif len(sys.argv) == 2:
         zip = int(sys.argv[1])
-        rate = 1/30.0 # 30 mins
+        rate = 0.0005 # 30 mins
     else:
         print("%s [zipcode] <refresh rate (secs)>" % sys.argv[0])
         sys.exit(1)
 
     try:
-        weather_pub_start(zip, min(rate, 0.1))
+        weather_pub_start(zip, rate)
     except rospy.ROSInterruptException:
         pass
