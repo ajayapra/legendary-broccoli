@@ -1,0 +1,8 @@
+prefix=/home/ian/Robotics/legendary-broccoli/weather_station/install
+
+Name: weather_station
+Description: Description of weather_station
+Version: 0.0.0
+Cflags: -I/home/ian/Robotics/legendary-broccoli/weather_station/install/include
+Libs: -L/home/ian/Robotics/legendary-broccoli/weather_station/install/lib 
+Requires: message_runtime roscpp rospy std_msgs
