@@ -24,14 +24,32 @@ struct Weather_
   typedef Weather_<ContainerAllocator> Type;
 
   Weather_()
-    {
+    : tempature(0)
+    , humidity(0)
+    , windspeed(0)
+    , timestamp()  {
     }
   Weather_(const ContainerAllocator& _alloc)
-    {
+    : tempature(0)
+    , humidity(0)
+    , windspeed(0)
+    , timestamp()  {
   (void)_alloc;
     }
 
 
+
+   typedef uint16_t _tempature_type;
+  _tempature_type tempature;
+
+   typedef uint8_t _humidity_type;
+  _humidity_type humidity;
+
+   typedef uint8_t _windspeed_type;
+  _windspeed_type windspeed;
+
+   typedef ros::Time _timestamp_type;
+  _timestamp_type timestamp;
 
 
 
@@ -110,12 +128,12 @@ struct MD5Sum< ::weather_station::Weather_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "d41d8cd98f00b204e9800998ecf8427e";
+    return "404dfc49b0bcf6acc814bdb5efbe5cdd";
   }
 
   static const char* value(const ::weather_station::Weather_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xd41d8cd98f00b204ULL;
-  static const uint64_t static_value2 = 0xe9800998ecf8427eULL;
+  static const uint64_t static_value1 = 0x404dfc49b0bcf6acULL;
+  static const uint64_t static_value2 = 0xc814bdb5efbe5cddULL;
 };
 
 template<class ContainerAllocator>
@@ -134,7 +152,10 @@ struct Definition< ::weather_station::Weather_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "\n\
+    return "uint16 tempature\n\
+uint8 humidity\n\
+uint8 windspeed\n\
+time timestamp\n\
 ";
   }
 
@@ -151,8 +172,13 @@ namespace serialization
 
   template<class ContainerAllocator> struct Serializer< ::weather_station::Weather_<ContainerAllocator> >
   {
-    template<typename Stream, typename T> inline static void allInOne(Stream&, T)
-    {}
+    template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
+    {
+      stream.next(m.tempature);
+      stream.next(m.humidity);
+      stream.next(m.windspeed);
+      stream.next(m.timestamp);
+    }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
   }; // struct Weather_
@@ -168,8 +194,17 @@ namespace message_operations
 template<class ContainerAllocator>
 struct Printer< ::weather_station::Weather_<ContainerAllocator> >
 {
-  template<typename Stream> static void stream(Stream&, const std::string&, const ::weather_station::Weather_<ContainerAllocator>&)
-  {}
+  template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::weather_station::Weather_<ContainerAllocator>& v)
+  {
+    s << indent << "tempature: ";
+    Printer<uint16_t>::stream(s, indent + "  ", v.tempature);
+    s << indent << "humidity: ";
+    Printer<uint8_t>::stream(s, indent + "  ", v.humidity);
+    s << indent << "windspeed: ";
+    Printer<uint8_t>::stream(s, indent + "  ", v.windspeed);
+    s << indent << "timestamp: ";
+    Printer<ros::Time>::stream(s, indent + "  ", v.timestamp);
+  }
 };
 
 } // namespace message_operations

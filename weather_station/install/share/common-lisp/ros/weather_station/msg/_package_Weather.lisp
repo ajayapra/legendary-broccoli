@@ -1,2 +1,8 @@
 (cl:in-package weather_station-msg)
-(cl:export '())
+(cl:export '(TEMPATURE-VAL
+          TEMPATURE
+          HUMIDITY-VAL
+          HUMIDITY
+          WINDSPEED-VAL
+          WINDSPEED
+))
