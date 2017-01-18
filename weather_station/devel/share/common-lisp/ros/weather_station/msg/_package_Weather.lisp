@@ -1,5 +1,7 @@
 (cl:in-package weather_station-msg)
-(cl:export '(TEMPATURE-VAL
+(cl:export '(ZIPCODE-VAL
+          ZIPCODE
+          TEMPATURE-VAL
           TEMPATURE
           HUMIDITY-VAL
           HUMIDITY

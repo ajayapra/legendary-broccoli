@@ -21,7 +21,8 @@ def weather_pub_start(zip, refresh):
         pub_weather = WeatherMsg(tempature=weather_data['temp_f'],
                                  humidity=weather_data['relative_humidity'],
                                  windspeed=weather_data['wind_mph'],
-                                 timestamp=rospy.Time.now())
+                                 timestamp=rospy.Time.now(),
+                                 zipcode=zip)
 
         # Publish the weather message
         rospy.loginfo(pub_weather)
