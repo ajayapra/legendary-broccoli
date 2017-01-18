@@ -7,7 +7,12 @@
 ;//! \htmlinclude Weather.msg.html
 
 (cl:defclass <Weather> (roslisp-msg-protocol:ros-message)
-  ((tempature
+  ((zipcode
+    :reader zipcode
+    :initarg :zipcode
+    :type cl:fixnum
+    :initform 0)
+   (tempature
     :reader tempature
     :initarg :tempature
     :type cl:fixnum
@@ -37,6 +42,11 @@
   (cl:unless (cl:typep m 'Weather)
     (roslisp-msg-protocol:msg-deprecation-warning "using old message class name weather_station-msg:<Weather> is deprecated: use weather_station-msg:Weather instead.")))
 
+(cl:ensure-generic-function 'zipcode-val :lambda-list '(m))
+(cl:defmethod zipcode-val ((m <Weather>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader weather_station-msg:zipcode-val is deprecated.  Use weather_station-msg:zipcode instead.")
+  (zipcode m))
+
 (cl:ensure-generic-function 'tempature-val :lambda-list '(m))
 (cl:defmethod tempature-val ((m <Weather>))
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader weather_station-msg:tempature-val is deprecated.  Use weather_station-msg:tempature instead.")
@@ -58,6 +68,8 @@
   (timestamp m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <Weather>) ostream)
   "Serializes a message object of type '<Weather>"
+  (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'zipcode)) ostream)
+  (cl:write-byte (cl:ldb (cl:byte 8 8) (cl:slot-value msg 'zipcode)) ostream)
   (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'tempature)) ostream)
   (cl:write-byte (cl:ldb (cl:byte 8 8) (cl:slot-value msg 'tempature)) ostream)
   (cl:write-byte (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'humidity)) ostream)
@@ -75,6 +87,8 @@
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <Weather>) istream)
   "Deserializes a message object of type '<Weather>"
+    (cl:setf (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'zipcode)) (cl:read-byte istream))
+    (cl:setf (cl:ldb (cl:byte 8 8) (cl:slot-value msg 'zipcode)) (cl:read-byte istream))
     (cl:setf (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'tempature)) (cl:read-byte istream))
     (cl:setf (cl:ldb (cl:byte 8 8) (cl:slot-value msg 'tempature)) (cl:read-byte istream))
     (cl:setf (cl:ldb (cl:byte 8 0) (cl:slot-value msg 'humidity)) (cl:read-byte istream))
@@ -99,18 +113,19 @@
   "weather_station/Weather")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<Weather>)))
   "Returns md5sum for a message object of type '<Weather>"
-  "404dfc49b0bcf6acc814bdb5efbe5cdd")
+  "1e9c7b5720495bafc81f6a366dd1cf57")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'Weather)))
   "Returns md5sum for a message object of type 'Weather"
-  "404dfc49b0bcf6acc814bdb5efbe5cdd")
+  "1e9c7b5720495bafc81f6a366dd1cf57")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<Weather>)))
   "Returns full string definition for message of type '<Weather>"
-  (cl:format cl:nil "uint16 tempature~%uint8 humidity~%uint8 windspeed~%time timestamp~%~%~%"))
+  (cl:format cl:nil "uint16 zipcode~%uint16 tempature~%uint8 humidity~%uint8 windspeed~%time timestamp~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'Weather)))
   "Returns full string definition for message of type 'Weather"
-  (cl:format cl:nil "uint16 tempature~%uint8 humidity~%uint8 windspeed~%time timestamp~%~%~%"))
+  (cl:format cl:nil "uint16 zipcode~%uint16 tempature~%uint8 humidity~%uint8 windspeed~%time timestamp~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <Weather>))
   (cl:+ 0
+     2
      2
      1
      1
@@ -119,6 +134,7 @@
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <Weather>))
   "Converts a ROS message object to a list"
   (cl:list 'Weather
+    (cl:cons ':zipcode (zipcode msg))
     (cl:cons ':tempature (tempature msg))
     (cl:cons ':humidity (humidity msg))
     (cl:cons ':windspeed (windspeed msg))

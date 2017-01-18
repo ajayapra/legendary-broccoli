@@ -24,13 +24,15 @@ struct Weather_
   typedef Weather_<ContainerAllocator> Type;
 
   Weather_()
-    : tempature(0)
+    : zipcode(0)
+    , tempature(0)
     , humidity(0)
     , windspeed(0)
     , timestamp()  {
     }
   Weather_(const ContainerAllocator& _alloc)
-    : tempature(0)
+    : zipcode(0)
+    , tempature(0)
     , humidity(0)
     , windspeed(0)
     , timestamp()  {
@@ -38,6 +40,9 @@ struct Weather_
     }
 
 
+
+   typedef uint16_t _zipcode_type;
+  _zipcode_type zipcode;
 
    typedef uint16_t _tempature_type;
   _tempature_type tempature;
@@ -128,12 +133,12 @@ struct MD5Sum< ::weather_station::Weather_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "404dfc49b0bcf6acc814bdb5efbe5cdd";
+    return "1e9c7b5720495bafc81f6a366dd1cf57";
   }
 
   static const char* value(const ::weather_station::Weather_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x404dfc49b0bcf6acULL;
-  static const uint64_t static_value2 = 0xc814bdb5efbe5cddULL;
+  static const uint64_t static_value1 = 0x1e9c7b5720495bafULL;
+  static const uint64_t static_value2 = 0xc81f6a366dd1cf57ULL;
 };
 
 template<class ContainerAllocator>
@@ -152,7 +157,8 @@ struct Definition< ::weather_station::Weather_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "uint16 tempature\n\
+    return "uint16 zipcode\n\
+uint16 tempature\n\
 uint8 humidity\n\
 uint8 windspeed\n\
 time timestamp\n\
@@ -174,6 +180,7 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
+      stream.next(m.zipcode);
       stream.next(m.tempature);
       stream.next(m.humidity);
       stream.next(m.windspeed);
@@ -196,6 +203,8 @@ struct Printer< ::weather_station::Weather_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::weather_station::Weather_<ContainerAllocator>& v)
   {
+    s << indent << "zipcode: ";
+    Printer<uint16_t>::stream(s, indent + "  ", v.zipcode);
     s << indent << "tempature: ";
     Printer<uint16_t>::stream(s, indent + "  ", v.tempature);
     s << indent << "humidity: ";
