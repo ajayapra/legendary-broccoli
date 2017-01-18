@@ -6,7 +6,7 @@ I'm Surya kiran Chittiboyana.
 
 GitHub account [suryakiran-kanna](https://github.com/suryakiran-kanna)
 
-email id : [suryakiran.kanna@gmail.com](suryakiran.kanna@gmail.com)
+email id : [schittib@mtu.edu](schittib@mtu.edu)
 
 ## Task
 I'm contributing to development of publisher part of the project.
