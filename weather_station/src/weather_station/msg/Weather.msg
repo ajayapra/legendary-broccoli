@@ -1,5 +1,5 @@
-uint16 zipcode
-uint16 tempature
-uint8 humidity
-uint8 windspeed
+string zipcode
+float32 tempature
+string humidity
+float32 windspeed
 time timestamp
