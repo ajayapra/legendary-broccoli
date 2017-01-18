@@ -13,9 +13,12 @@ $ source devel/setup.bash
 ```
 # Executing Publisher and Listener
 Make sure you do $ source devel/setup.bash in every new terminal
+
 In one terminal
-$ roscore
+`$ roscore`
+
 Open another terminal
-$ rosrun weather_station listener.py
+`$ rosrun weather_station listener.py`
+
 Open another terminal
-$ rosrun weather_station talker.py
+`$ rosrun weather_station talker.py`
