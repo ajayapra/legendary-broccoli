@@ -18,9 +18,9 @@ def weather_pub_start(zip, refresh):
         weather_data = json.loads(f.read())['current_observation']
 
         # Make a weather message
-        pub_weather = WeatherMsg(tempature=weather_data['temp_f'],
+        pub_weather = WeatherMsg(temperature=float(weather_data['temp_f']),
                                  humidity=weather_data['relative_humidity'],
-                                 windspeed=weather_data['wind_mph'],
+                                 windspeed=float(weather_data['wind_mph']),
                                  timestamp=rospy.Time.now(),
                                  zipcode=zip)
 
@@ -31,10 +31,10 @@ def weather_pub_start(zip, refresh):
 
 if __name__ == '__main__':
     if len(sys.argv) == 3:
-        zip = int(sys.argv[1])
+        zip = sys.argv[1]
         rate = 1/float(sys.argv[2])
     elif len(sys.argv) == 2:
-        zip = int(sys.argv[1])
+        zip = sys.argv[1]
         rate = 0.0005 # 30 mins
     else:
         print("%s [zipcode] <refresh rate (secs)>" % sys.argv[0])
