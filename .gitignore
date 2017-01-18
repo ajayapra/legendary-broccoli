@@ -3,3 +3,4 @@ build/
 devel/
 install/
 /weather_station/src/CMakeLists.txt
+/weather_station/*.catkin_workspace 
