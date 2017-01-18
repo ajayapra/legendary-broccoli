@@ -357,6 +357,110 @@ std_msgs_generate_messages_py/fast:
 	$(MAKE) -f beginner_tutorials/CMakeFiles/std_msgs_generate_messages_py.dir/build.make beginner_tutorials/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
+#=============================================================================
+# Target rules for targets named _weather_station_generate_messages_check_deps_Weather
+
+# Build rule for target.
+_weather_station_generate_messages_check_deps_Weather: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _weather_station_generate_messages_check_deps_Weather
+.PHONY : _weather_station_generate_messages_check_deps_Weather
+
+# fast build rule for target.
+_weather_station_generate_messages_check_deps_Weather/fast:
+	$(MAKE) -f weather_station/CMakeFiles/_weather_station_generate_messages_check_deps_Weather.dir/build.make weather_station/CMakeFiles/_weather_station_generate_messages_check_deps_Weather.dir/build
+.PHONY : _weather_station_generate_messages_check_deps_Weather/fast
+
+#=============================================================================
+# Target rules for targets named weather_station_gencpp
+
+# Build rule for target.
+weather_station_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 weather_station_gencpp
+.PHONY : weather_station_gencpp
+
+# fast build rule for target.
+weather_station_gencpp/fast:
+	$(MAKE) -f weather_station/CMakeFiles/weather_station_gencpp.dir/build.make weather_station/CMakeFiles/weather_station_gencpp.dir/build
+.PHONY : weather_station_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named weather_station_generate_messages
+
+# Build rule for target.
+weather_station_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 weather_station_generate_messages
+.PHONY : weather_station_generate_messages
+
+# fast build rule for target.
+weather_station_generate_messages/fast:
+	$(MAKE) -f weather_station/CMakeFiles/weather_station_generate_messages.dir/build.make weather_station/CMakeFiles/weather_station_generate_messages.dir/build
+.PHONY : weather_station_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named weather_station_generate_messages_cpp
+
+# Build rule for target.
+weather_station_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 weather_station_generate_messages_cpp
+.PHONY : weather_station_generate_messages_cpp
+
+# fast build rule for target.
+weather_station_generate_messages_cpp/fast:
+	$(MAKE) -f weather_station/CMakeFiles/weather_station_generate_messages_cpp.dir/build.make weather_station/CMakeFiles/weather_station_generate_messages_cpp.dir/build
+.PHONY : weather_station_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named weather_station_generate_messages_lisp
+
+# Build rule for target.
+weather_station_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 weather_station_generate_messages_lisp
+.PHONY : weather_station_generate_messages_lisp
+
+# fast build rule for target.
+weather_station_generate_messages_lisp/fast:
+	$(MAKE) -f weather_station/CMakeFiles/weather_station_generate_messages_lisp.dir/build.make weather_station/CMakeFiles/weather_station_generate_messages_lisp.dir/build
+.PHONY : weather_station_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named weather_station_generate_messages_py
+
+# Build rule for target.
+weather_station_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 weather_station_generate_messages_py
+.PHONY : weather_station_generate_messages_py
+
+# fast build rule for target.
+weather_station_generate_messages_py/fast:
+	$(MAKE) -f weather_station/CMakeFiles/weather_station_generate_messages_py.dir/build.make weather_station/CMakeFiles/weather_station_generate_messages_py.dir/build
+.PHONY : weather_station_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named weather_station_genlisp
+
+# Build rule for target.
+weather_station_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 weather_station_genlisp
+.PHONY : weather_station_genlisp
+
+# fast build rule for target.
+weather_station_genlisp/fast:
+	$(MAKE) -f weather_station/CMakeFiles/weather_station_genlisp.dir/build.make weather_station/CMakeFiles/weather_station_genlisp.dir/build
+.PHONY : weather_station_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named weather_station_genpy
+
+# Build rule for target.
+weather_station_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 weather_station_genpy
+.PHONY : weather_station_genpy
+
+# fast build rule for target.
+weather_station_genpy/fast:
+	$(MAKE) -f weather_station/CMakeFiles/weather_station_genpy.dir/build.make weather_station/CMakeFiles/weather_station_genpy.dir/build
+.PHONY : weather_station_genpy/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -386,6 +490,14 @@ help:
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"
+	@echo "... _weather_station_generate_messages_check_deps_Weather"
+	@echo "... weather_station_gencpp"
+	@echo "... weather_station_generate_messages"
+	@echo "... weather_station_generate_messages_cpp"
+	@echo "... weather_station_generate_messages_lisp"
+	@echo "... weather_station_generate_messages_py"
+	@echo "... weather_station_genlisp"
+	@echo "... weather_station_genpy"
 .PHONY : help
 
 

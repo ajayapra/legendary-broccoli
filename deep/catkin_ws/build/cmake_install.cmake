@@ -118,6 +118,7 @@ IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   INCLUDE("/home/robotics5/git/legendary-broccoli/deep/catkin_ws/build/gtest/cmake_install.cmake")
   INCLUDE("/home/robotics5/git/legendary-broccoli/deep/catkin_ws/build/beginner_tutorials/cmake_install.cmake")
+  INCLUDE("/home/robotics5/git/legendary-broccoli/deep/catkin_ws/build/weather_station/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

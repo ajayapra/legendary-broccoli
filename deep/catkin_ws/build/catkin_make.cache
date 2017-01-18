@@ -1,2 +1,2 @@
-beginner_tutorials
+beginner_tutorials:weather_station
 -DCATKIN_DEVEL_PREFIX=/home/robotics5/git/legendary-broccoli/deep/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/robotics5/git/legendary-broccoli/deep/catkin_ws/install -G Unix Makefiles

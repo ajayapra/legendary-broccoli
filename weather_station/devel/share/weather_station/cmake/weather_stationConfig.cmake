@@ -67,14 +67,14 @@ set(weather_station_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(weather_station_SOURCE_PREFIX /home/ian/Robotics/legendary-broccoli/weather_station/src/weather_station)
-  set(weather_station_DEVEL_PREFIX /home/ian/Robotics/legendary-broccoli/weather_station/devel)
+  set(weather_station_SOURCE_PREFIX /home/robotics5/git/legendary-broccoli/weather_station/src/weather_station)
+  set(weather_station_DEVEL_PREFIX /home/robotics5/git/legendary-broccoli/weather_station/devel)
   set(weather_station_INSTALL_PREFIX "")
   set(weather_station_PREFIX ${weather_station_DEVEL_PREFIX})
 else()
   set(weather_station_SOURCE_PREFIX "")
   set(weather_station_DEVEL_PREFIX "")
-  set(weather_station_INSTALL_PREFIX /home/ian/Robotics/legendary-broccoli/weather_station/install)
+  set(weather_station_INSTALL_PREFIX /home/robotics5/git/legendary-broccoli/weather_station/install)
   set(weather_station_PREFIX ${weather_station_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(weather_station_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/ian/Robotics/legendary-broccoli/weather_station/devel/include " STREQUAL " ")
+if(NOT "/home/robotics5/git/legendary-broccoli/weather_station/devel/include " STREQUAL " ")
   set(weather_station_INCLUDE_DIRS "")
-  set(_include_dirs "/home/ian/Robotics/legendary-broccoli/weather_station/devel/include")
+  set(_include_dirs "/home/robotics5/git/legendary-broccoli/weather_station/devel/include")
   foreach(idir ${_include_dirs})
     if(IS_ABSOLUTE ${idir} AND IS_DIRECTORY ${idir})
       set(include ${idir})
@@ -103,7 +103,7 @@ if(NOT "/home/ian/Robotics/legendary-broccoli/weather_station/devel/include " ST
         message(FATAL_ERROR "Project 'weather_station' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  Ask the maintainer 'Ian Wakely <raveious.irw@gmail.com>' to fix it.")
       endif()
     else()
-      message(FATAL_ERROR "Project 'weather_station' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/ian/Robotics/legendary-broccoli/weather_station/src/weather_station/${idir}'.  Ask the maintainer 'Ian Wakely <raveious.irw@gmail.com>' to fix it.")
+      message(FATAL_ERROR "Project 'weather_station' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/robotics5/git/legendary-broccoli/weather_station/src/weather_station/${idir}'.  Ask the maintainer 'Ian Wakely <raveious.irw@gmail.com>' to fix it.")
     endif()
     _list_append_unique(weather_station_INCLUDE_DIRS ${include})
   endforeach()
@@ -122,7 +122,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/ian/Robotics/legendary-broccoli/weather_station/devel/lib;/home/ian/Robotics/legendary-broccoli/weather_station/devel/lib;/opt/ros/indigo/lib)
+    foreach(path /home/robotics5/git/legendary-broccoli/weather_station/devel/lib;/home/robotics5/git/legendary-broccoli/weather_station/devel/lib;/opt/ros/indigo/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
