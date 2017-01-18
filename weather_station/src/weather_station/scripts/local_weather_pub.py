@@ -18,7 +18,7 @@ def weather_pub_start(zip, refresh):
         weather_data = json.loads(f.read())['current_observation']
 
         # Make a weather message
-        pub_weather = WeatherMsg(tempature=float(weather_data['temp_f']),
+        pub_weather = WeatherMsg(temperature=float(weather_data['temp_f']),
                                  humidity=weather_data['relative_humidity'],
                                  windspeed=float(weather_data['wind_mph']),
                                  timestamp=rospy.Time.now(),
