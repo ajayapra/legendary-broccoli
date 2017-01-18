@@ -1,1 +1,5 @@
+# Ignore all catkin workspace dirs and build output
 build/
+devel/
+install/
+/weather_station/src/CMakeLists.txt
